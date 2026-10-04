@@ -1,0 +1,35 @@
+@use "./_varibles" as v;
+@use "./_mixins" as m;
+@use "./_card" as c;
+
+@import url(../css/reset.css);
+
+
+body{
+    @include m.flex-centre;
+    width: 100vw;
+    height: 100vh;
+    
+    
+    h1{
+        
+        @include m.line;
+        font-size: 40px;
+        position: relative;
+       &::after{
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+
+        } 
+        &::before{
+            content: "";
+            position: absolute;
+            top: -5px;
+            right: 0;
+            width: 0;
+        }
+    }
+}

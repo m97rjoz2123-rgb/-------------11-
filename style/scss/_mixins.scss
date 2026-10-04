@@ -1,0 +1,34 @@
+@mixin flex-centre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+@mixin section-container{
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+@mixin line{
+    
+    &:hover::after{
+        transition: all 2s ease-in-out;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        width: 100%;
+    }
+    &:hover::before{
+        transition: all 2s ease-in-out;
+        border-top: 1px solid rgb(255, 0, 0);
+        width: 100%;
+    }
+
+}
+
+@mixin card-hover{
+    transition: all 1s ease-in-out;
+    &:hover{
+        transform: translateY(-6px);
+        opacity: 0.85;
+    }
+}
+
+
